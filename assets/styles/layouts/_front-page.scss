@@ -1,7 +1,44 @@
 .home {
-  header {
-    img {
-      max-width: 14em;
+  main header {
+    @include outer-container;
+    @include pad();
+    padding-top: 0;
+    figure {
+      text-align: center;
+      margin: 0;
+      img {
+        max-width: 12em;
+      }
+      margin-bottom: $base-spacing;
+      @include media($phablet) {
+        @include span-columns(5);
+        @include pad();
+      }
+    }
+    section.intro {
+      @include media($phablet) {
+        @include span-columns(7);
+        @include pad();
+        @include omega();
+      }
+    }
+    .intro {
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+  section.reels {
+    @include row;
+    iframe {
+      @include span-columns(6);
+      @include pad();
+      &:nth-of-type(2) {
+        @include omega();
+      }
+    }
+    hr {
+      clear: both;
     }
   }
 }

@@ -25,7 +25,7 @@
   - Tap color
     (touch devices):       rgba(113, 239, 172, .5)
   - Marked Text BG,
-    Callout Boxes BG:      #eafded
+    Callout Boxes BG:      #e4fbff
 
   - Menu Separator,
     <hr> in text:          #a8a5be
@@ -139,7 +139,7 @@ p, ul, ol, figure, pre {
 
 /* Headings */
 h1, h2, h3 {
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-family: $heading-font-family;
   font-weight: 700;
 }
 
@@ -212,13 +212,6 @@ h1 + hr,
   margin-top: -1.5rem;
 }
 
-i, em {
-  /* Vesper Libre does not have Italics,
-     so we use a the *medium* weight instead */
-  font-weight: 500;
-  font-style: normal;
-}
-
 b, strong {
   font-weight: 700;
 }
@@ -227,7 +220,7 @@ mark {
   padding: .1em .05em;
   margin: -.1em 0;
   color: #261e66;
-  background: #eafded;
+  background: #e4fbff;
 }
 
 /* -----  1.4 Images & Figures  --------------------------------------------- */
@@ -300,7 +293,7 @@ h1 + .intro {
 }
 
 .text pre, .text code {
-  background-color: #eafded;
+  background-color: #e4fbff;
   font-family: Courier, monospace;
   font-size: .75rem;
 }
@@ -338,13 +331,13 @@ h1 + .intro {
   background: #e9e9e9;
   border-radius: 4px;
   box-shadow: 0 2px 0 #c9c7d4;
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-family: $heading-font-family;
   position: relative;
   bottom: 2px;
 }
 
 .text blockquote {
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-family: $heading-font-family;
   border-left: 2px solid #a8a5be;
   padding: .75rem;
   background: #fffffd;
@@ -362,7 +355,7 @@ h1 + .intro {
   padding: .6em .75em;
   white-space: nowrap;
   font-size: .75em;
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-family: $heading-font-family;
   line-height: 1;
   font-weight: 400;
 }
@@ -552,7 +545,7 @@ h1 + .intro {
   right: .75rem;
   bottom: .75rem;
   background: rgba(38, 30, 102, .95);
-  color: #eafded;
+  color: #e4fbff;
   letter-spacing: .05em;
   opacity: 0;
   -webkit-transition: .25s opacity;
@@ -605,42 +598,7 @@ h1 + .intro {
 
 /* =====  3 Site Layout  ==================================================== */
 
-html {
-  background: #fffff8;
-  color: #261e66;
-  font: normal 400 1.5em/1.5 "Vesper Libre", Georgia, serif;
-  /* Always show the vertical scrollbar to prevent `jumps`
-     of page content after navigating from a very short page
-     that does not scroll to a long pager */
-  overflow-y: scroll;
-  /* Setting this to `default` prevents the cursors from
-     changing when hovering blocks of text or whitespace,
-     which is less distracting */
-  cursor: default;
-  /* Neccessary for sticks footer. */
-  position: relative;
-  min-height: 100%;
-  /* Prevent adjustments of font size after orientation
-     changes in IE and iOS. */
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  /* Highlight color for WebKit-bases touch devices. */
-  -webkit-tap-highlight-color: rgba(113, 239, 172, .5);
-}
 
-@media all and (max-width: 30em) {
-  html {
-    /* We decrease the font-size a little-bit for tiny
-       screens. Because this stylesheet uses relative units
-       everywhere, everything scales nicely. */
-    font-size: 1.25em;
-  }
-}
-
-body {
-  /* space for sticky footer */
-  margin-bottom: 4.5rem;
-}
 
 /* ----- 3.1  Header  ------------------------------------------------------- */
 
@@ -650,7 +608,7 @@ body {
 
 .branding {
   text-align: center;
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-family: $heading-font-family;
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.95rem;
@@ -664,7 +622,7 @@ body {
 @media all and (min-width: 56em) {
   .header {
     padding-top: 3rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
   }
   .branding {
     line-height: 3rem;
@@ -769,7 +727,7 @@ body {
 /* -----  4.1 Homepage  ----------------------------------------------------- */
 
 .projects-section {
-  background: #eafded;
+  background: #e4fbff;
   margin-top: 3rem;
   padding-top: 2.25rem;
   padding-bottom: .75rem;
@@ -802,7 +760,7 @@ body {
 .article-more {
   font-size: 75%;
   text-transform: uppercase;
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-family: $heading-font-family;
   letter-spacing: .025em;
   white-space: nowrap;
   border-bottom: 2px solid #71efac;
@@ -863,7 +821,7 @@ body {
 
 .contact-item {
   padding: 0 .375rem;
-  background: #eafded;
+  background: #e4fbff;
   background-clip: content-box;
   text-align: center;
   font-size: .85rem;

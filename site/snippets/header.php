@@ -13,8 +13,10 @@
   <?= js('dist/scripts/vendor.js') ?>
   <?= js('dist/scripts/main.js') ?>
 
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
+
 </head>
-<body class="<?php echo $page->template(); ?>">
+<body class="<?php echo $page->template(); ?> <?php echo $page->uid() ?>">
 
   <header class="header wrap wide" role="banner">
     <div class="grid">

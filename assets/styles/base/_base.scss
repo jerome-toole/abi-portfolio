@@ -13,3 +13,49 @@
 @import "lists";
 @import "tables";
 @import "typography";
+
+
+html {
+  background: $background-color;
+  color: $base-font-color;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-family: $base-font-family;
+  /* Always show the vertical scrollbar to prevent `jumps`
+     of page content after navigating from a very short page
+     that does not scroll to a long pager */
+  overflow-y: scroll;
+  /* Setting this to `default` prevents the cursors from
+     changing when hovering blocks of text or whitespace,
+     which is less distracting */
+  cursor: default;
+  /* Neccessary for sticks footer. */
+  position: relative;
+  min-height: 100%;
+  /* Prevent adjustments of font size after orientation
+     changes in IE and iOS. */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* Highlight color for WebKit-bases touch devices. */
+  -webkit-tap-highlight-color: rgba(113, 239, 172, .5);
+}
+
+@media all and (max-width: 30em) {
+  html {
+    /* We decrease the font-size a little-bit for tiny
+       screens. Because this stylesheet uses relative units
+       everywhere, everything scales nicely. */
+    font-size: 1.25em;
+  }
+}
+
+body {
+  /* space for sticky footer */
+  margin-bottom: 10rem;
+}
+
+.wrap {
+  @include pad();
+}

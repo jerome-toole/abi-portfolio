@@ -9,15 +9,21 @@
           <img src="<?= $page->landingimage()->toFile()->url() ?>" alt="" />
         </figure>
       <?php endif ?>
-      <div class="intro text">
-        <?= $page->intro()->kirbytext() ?>
-      </div>
-      <hr />
+      <section class="intro">
+        <div class="text">
+          <?= $page->intro()->kirbytext() ?>
+        </div>
+        <div class="experience text">
+          <?= $page->experience()->kirbytext() ?>
+        </div>
+      </section>
     </header>
 
-    <div class="text wrap">
-      <?= $page->text()->kirbytext() ?>
-    </div>
+    <section class="reels wrap">
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<?php echo $page->commerciallink() ?>&amp;color=fff5ef&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+      
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<?php echo $page->narrativelink() ?>&amp;color=fff5ef&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+    </section>
 
     <section class="projects-section">
       

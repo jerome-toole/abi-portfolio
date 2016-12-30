@@ -1,6 +1,7 @@
 // Typography
-$base-font-family: $helvetica;
-$heading-font-family: $base-font-family;
+$lato: Lato, 'Lato', $helvetica;
+$base-font-family: $lato;
+$heading-font-family: 'Karla', $helvetica;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -16,13 +17,18 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #1565c0;
-$dark-gray: #333;
+$blue: #143888;
+$dark-gray: #111;
 $medium-gray: #999;
 $light-gray: #ddd;
 
+$black: #000;
+$light-blue: #d9dce8;
+$blue-green: #e4fbff;
+$background-color: #fff5ef;
+
 // Font Colors
-$base-font-color: $dark-gray;
+$base-font-color: $blue;
 $action-color: $blue;
 
 // Border
@@ -40,3 +46,16 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+
+// Screen Widths
+
+$phone : 27.5rem;
+
+$phablet : 40rem;
+
+$tablet : 60rem;
+
+$laptop : 80rem;
+
+$desktop : 90rem;

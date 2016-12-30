@@ -13,23 +13,23 @@ fields:
     width: 1/2
 
   intro:
-    label: Intro
+    label: Intro Text
     type:  textarea
     size:  small
 
-  text:
+  experience:
     label: Experience
     type:  textarea
     size:  small
 
-  commercial_link:
+  commerciallink:
     label: Commercial Reel
-    type: url
+    type: number
     width: 1/2
 
-  narrative_link:
+  narrativelink:
     label: Narrative Reel
-    type: url
+    type: number
     width: 1/2
 
   bio:
