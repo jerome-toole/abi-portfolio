@@ -1,0 +1,22 @@
+.project-list {
+  &__item {
+    @include row;
+    margin-bottom: $base-spacing;
+  }
+  &__image {
+    @include media($phone) {
+      @include span-columns(4);
+      @include pad();
+    }
+  }
+  &__details {
+    @include media($phone) {
+      @include span-columns(8);
+      @include pad();
+    }
+    h1, h2, h3, h4, h5 {
+      margin-bottom: 0;
+    }
+  }
+
+}

@@ -26,16 +26,30 @@
       text-align: left;
       font-size: 1rem;
       font-weight: 400;
+      margin-bottom: 0;
+    }
+    ul {
+      margin-bottom: 0;
     }
   }
   section.reels {
     @include row;
-    iframe {
-      @include span-columns(6);
+    div {
+      text-align: center;
+      h2 {
+        font-size: .9rem;
+        margin-bottom: $small-spacing;
+      }
+      @include media($phablet) {
+        @include span-columns(6);
+      }
       @include pad();
       &:nth-of-type(2) {
         @include omega();
       }
+      iframe {
+      }
+      
     }
     hr {
       clear: both;

@@ -1,0 +1,22 @@
+title: Testimonial
+
+files:
+  sortable: true
+
+pages: false
+
+fields:
+  title:
+    label: Name
+    type:  text
+    width: 1/2
+
+  position:
+    label: Position
+    type: text
+    width: 1/2
+
+  text:
+    label: Text
+    type:  textarea
+

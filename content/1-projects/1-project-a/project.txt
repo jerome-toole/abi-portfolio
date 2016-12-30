@@ -1,4 +1,4 @@
-Title: A Story
+Title: My Mad Fat Diary
 
 ----
 
@@ -6,16 +6,16 @@ Type: Audiobook
 
 ----
 
-Text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+Text: Rae Earl's hysterically funny and very touching real-life 1989 diary.
 
 ----
 
-Client: Client Name
+Client: Hodder Books
 
 ----
 
-Link: 
+Link: https://soundcloud.com/hodderbooks/my-mad-fat-diary-by-rae-earl-read-by-abigail-hardiman-extract
 
 ----
 
-Image: 
+Image: artworks-000119662162-fo1vca-t500x500.jpg

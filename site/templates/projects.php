@@ -11,7 +11,7 @@
     </header>
       
     <div class="wrap wide">    
-      <?php snippet('showcase') ?>
+      <?php snippet('project-list') ?>
     </div>
 
   </main>

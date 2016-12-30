@@ -199,7 +199,7 @@ hr::before {
 
 hr::after {
   content: "× × ×";
-  background: #fffff8;
+  background: $background-color;
   position: relative;
   padding: 0 .25rem;
   top: -.25rem;

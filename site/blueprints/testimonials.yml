@@ -1,0 +1,20 @@
+title: Testimonials
+
+files: false
+
+pages:
+  template: testimonial
+
+options: 
+  template: false  
+  status: false  
+  url: false  
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  text:
+    label: Text
+    type:  textarea

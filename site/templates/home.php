@@ -20,17 +20,27 @@
     </header>
 
     <section class="reels wrap">
-      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<?php echo $page->commerciallink() ?>&amp;color=fff5ef&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+      <div>
+        <h2>Commercial</h2>
+        <iframe width="100%" height="110" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<?php echo $page->commerciallink() ?>&amp;color=143888&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>
+      </div>
       
-      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<?php echo $page->narrativelink() ?>&amp;color=fff5ef&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+      <div>
+        <h2>Narrative</h2>
+        <iframe width="100%" height="110" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<?php echo $page->narrativelink() ?>&amp;color=143888&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>
+      </div>
     </section>
 
     <section class="projects-section">
       
       <div class="wrap wide">
         <h2>Latest Projects</h2>
-        <?php snippet('showcase', ['limit' => 3]) ?>
-        <p class="projects-section-more"><a href="<?= page('projects')->url() ?>" class="btn">show all projects &hellip;</a></p>
+        <?php snippet('project-list') ?>
+      </div>
+
+      <div class="wrap wide">
+        <h2>Testimonials</h2>
+        <?php snippet('testimonials') ?>
       </div>
       
     </section>

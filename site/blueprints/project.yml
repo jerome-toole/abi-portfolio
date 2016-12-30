@@ -26,7 +26,7 @@ fields:
     width: 1/4
 
   link:
-    label: link
+    label: Link
     type: url
     width: 3/4
 
