@@ -1,0 +1,38 @@
+title: Home
+
+pages: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  landingimage:
+    label: Image
+    type: image
+    width: 1/2
+
+  intro:
+    label: Intro
+    type:  textarea
+    size:  small
+
+  text:
+    label: Experience
+    type:  textarea
+    size:  small
+
+  commercial_link:
+    label: Commercial Reel
+    type: url
+    width: 1/2
+
+  narrative_link:
+    label: Narrative Reel
+    type: url
+    width: 1/2
+
+  bio:
+    label: Bio
+    type:  textarea
+    size:  large

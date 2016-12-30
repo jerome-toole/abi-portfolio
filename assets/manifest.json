@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "vendor.js": {
+      "vendor": [
+        "assets/scripts/vendor/modernizr.custom.js",
+        "assets/scripts/vendor/jquery.debouncedresize.js",
+        "assets/scripts/vendor/imagesloaded.pkgd.min.js",
+        "assets/scripts/vendor/jquery.scrolldepth.js",
+        "assets/scripts/vendor/jquery-easing.js",
+        "assets/scripts/vendor/soundcloud-sdk.js",
+        "assets/scripts/vendor/soundcloud.player.api.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    }
+  },
+  "config": {
+    "devUrl": "localhost:4000"
+  }
+}

@@ -1,0 +1,36 @@
+title: Project
+
+files:
+  sortable: true
+
+pages: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+    width: 1/2
+
+  client:
+    label: Client
+    type: text
+    width: 1/2
+
+  image:
+    label: Image
+    type: image
+
+  type:
+    label: Type
+    type:  text
+    width: 1/4
+
+  link:
+    label: link
+    type: url
+    width: 3/4
+
+  text:
+    label: Description
+    type:  textarea
+

@@ -1,0 +1,28 @@
+title: Site
+
+pages: default
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  author:
+    label: Author
+    type:  text
+
+  description:
+    label: Description
+    type:  textarea
+    
+  copyright:
+    label: Copyright
+    type:  textarea
+
+  footer_text:
+    label: Footer Text
+    type: text
+
+  footer_link:
+    label: Footer Link
+    type: email
