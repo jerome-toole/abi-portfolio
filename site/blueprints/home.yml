@@ -24,13 +24,15 @@ fields:
 
   commerciallink:
     label: Commercial Reel
-    type: number
+    type: select
     width: 1/2
+    options: audio
 
   narrativelink:
     label: Narrative Reel
-    type: number
+    type: select
     width: 1/2
+    options: audio
 
   bio:
     label: Bio
