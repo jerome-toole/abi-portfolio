@@ -1,2 +1,2 @@
-
+audiojs.events.ready(function(){audiojs.createAll({css:!1,createPlayer:{markup:!1,playPauseClass:"play-pause",scrubberClass:"scrubber",progressClass:"progress",loaderClass:"loaded",timeClass:"time",durationClass:"duration",playedClass:"played",errorMessageClass:"error-message",playingClass:"playing",loadingClass:"loading",errorClass:"error"}})});
 //# sourceMappingURL=main.js.map

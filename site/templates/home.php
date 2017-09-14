@@ -1,35 +1,95 @@
 <?php snippet('header') ?>
 
   <main class="main" role="main">
-
     
-    <header class="wrap">
+    
+    <section class="splash">
       <?php if($page->landingimage()->isNotEmpty()): ?>
         <figure class="landingimage">
-          <img src="<?= $page->landingimage()->toFile()->url() ?>" alt="" />
+        <img src="<?= $page->landingimage()->toFile()->url() ?>" alt="" />
         </figure>
       <?php endif ?>
-      <section class="intro">
-        <div class="text">
-          <?= $page->intro()->kirbytext() ?>
-        </div>
-        <div class="experience text">
-          <?= $page->experience()->kirbytext() ?>
-        </div>
-      </section>
-    </header>
-
-    <section class="reels wrap">
-      <div>
-        <h2>Commercial</h2>
-        <iframe width="100%" height="110" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<?php echo $page->commerciallink() ?>&amp;color=143888&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>
-      </div>
-      
-      <div>
-        <h2>Narrative</h2>
-        <iframe width="100%" height="110" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<?php echo $page->narrativelink() ?>&amp;color=143888&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>
+      <div class="right">
+        <h1><?= $site->title()->html() ?></h1>
+        <h2>Voice Actress and Technician</h2>
       </div>
     </section>
+    <section class="intro">
+      <div class="text">
+        <?= $page->intro()->kirbytext() ?>
+      </div>
+      <div class="experience text">
+        <?= $page->experience()->kirbytext() ?>
+      </div>
+    </section>
+
+
+    <section class="reels wrap">
+      <?php if($file = $page->file('sample.mp3')): ?>
+      <div class="audio-player-wrap audiojs">
+    
+            <audio>
+              Your browser does not support the <code>audio</code> element.
+              <source src="<?php echo $file->url() ?>" type="audio/mp3">
+            </audio>
+            <div class="audio-player">
+              <div class="play-pause">
+                <p class="play">play</p>
+                <p class="pause"></p>
+                <p class="loading"></p>
+                <p class="error"></p>
+              </div>
+              <div class="player-controls">
+                <div class="scrubber">
+                  <div class="progress"></div>
+                  <div class="loaded"></div>
+                </div>
+              </div>
+
+              <div class="time"><em class="played">00:00</em>/<strong class="duration">00:00</strong></div>
+              <div class="error-message"></div>
+            </div>
+
+        
+      </div>
+      <?php endif ?>  
+
+      <?php if($file = $page->file('sample.mp3')): ?>
+      <div class="audio-player-wrap audiojs">
+      
+            <audio>
+              Your browser does not support the <code>audio</code> element.
+              <source src="<?php echo $file->url() ?>" type="audio/mp3">
+            </audio>
+            <div class="audio-player">
+              <div class="controls">
+              
+                <div class="play-pause">
+                  <p class="play">play</p>
+                  <p class="pause"></p>
+                  <p class="loading"></p>
+                  <p class="error"></p>
+                </div>
+              
+                <div class="player-controls">
+                  <div class="scrubber">
+                    <div class="progress"></div>
+                    <div class="loaded"></div>
+                  </div>
+                </div>
+
+                <div class="time"><em class="played">00:00</em>/<strong class="duration">00:00</strong></div>
+                <div class="error-message"></div>
+              </div>
+            </div>
+
+        
+      </div>
+      <?php endif ?>
+    
+    </section>
+
+    <hr>
 
     <section class="projects-section">
       

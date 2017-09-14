@@ -19,8 +19,7 @@
         "assets/scripts/vendor/imagesloaded.pkgd.min.js",
         "assets/scripts/vendor/jquery.scrolldepth.js",
         "assets/scripts/vendor/jquery-easing.js",
-        "assets/scripts/vendor/soundcloud-sdk.js",
-        "assets/scripts/vendor/soundcloud.player.api.js"
+        "assets/scripts/vendor/audio.min.js"
       ]
     },
     "jquery.js": {

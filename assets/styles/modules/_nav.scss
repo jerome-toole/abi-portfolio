@@ -1,0 +1,36 @@
+/* -----  3.2 Menu  --------------------------------------------------------- */
+
+
+.header {
+  background-color: $background-color;
+}
+
+.menu {
+  text-align: center;
+  font-weight: 500;
+  font-size: .6em;
+  color: $display-color;
+}
+
+.menu-item {
+  display: inline-block;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 1em;
+}
+
+.menu-item a {
+  border-bottom: 0;
+  text-transform: uppercase;
+}
+
+.menu-item.is-active a {
+  border-bottom: 2px solid #71efac;
+}
+
+@media all and (min-width: 56em) {
+  .menu {
+    text-align: left;
+  }
+}

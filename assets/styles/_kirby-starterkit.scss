@@ -15,13 +15,13 @@
   
   - Background:            #fffff8
   - Text:                  #261e66
-  - Hovered Links:         #560bed
+  - Hovered Links:         #444444
   - Active Button BG:      #4509be
   - Caption BG in projects
     showcase:              rgba(38, 30, 102, .95)
 
   - Highlight, Selection,
-    Link Underline:        #71efac
+    Link Underline:        #fff
   - Tap color
     (touch devices):       rgba(113, 239, 172, .5)
   - Marked Text BG,
@@ -101,6 +101,34 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/Karla-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Karla';
+  font-style: italic;
+  font-weight: normal;
+  src: url(../fonts/Karla-Italic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: bold;
+  src: url(../fonts/Karla-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Karla';
+  font-style: italic;
+  font-weight: bold;
+  src: url(../fonts/Karla-BoldItalic.ttf) format('truetype');
+}
+
+
+
 /* -----  1.2 Reset & Normalization  ---------------------------------------- */
 
 *, *::before, *::after {
@@ -118,12 +146,12 @@ footer, header, main, menu, nav, section, summary {
 }
 
 ::-moz-selection {
-  background: #71efac;
+  background: #fff;
   color: #261e66;
 }
 
 ::selection {
-  background: #71efac;
+  background: #fff;
   color: #261e66;
 }
 
@@ -147,14 +175,11 @@ h1 {
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 1.25;
-  text-align: center;
-  margin-bottom: 3rem;
 }
 
 h2 {
   font-size: 1.75rem;
-  line-height: 2.2rem;
-  text-align: center;
+  line-height: 1.25;
 }
 
 h3 {
@@ -170,7 +195,6 @@ h4 {
 a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 2px solid #71efac;
 }
 
 a:hover, a:focus, a:active {
@@ -179,13 +203,10 @@ a:hover, a:focus, a:active {
 
 /* Misc */
 hr {
-  font-size: 1.25rem;
-  font-weight: 500;
-  height: 1.5rem;
   text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-  color: #71efac;
+  margin: 1.5rem auto;
+  width: 80%;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 hr::before {
@@ -195,14 +216,6 @@ hr::before {
   background: currentColor;
   height: 2px;
   top: calc(50% + 1px);
-}
-
-hr::after {
-  content: "× × ×";
-  background: $background-color;
-  position: relative;
-  padding: 0 .25rem;
-  top: -.25rem;
 }
 
 h1 + hr,
@@ -363,12 +376,12 @@ h1 + .intro {
 .btn:hover, .btn:focus {
   background: #261e66;
   border-color: #261e66;
-  color: #71efac;
+  color: #fff;
 }
 
 .btn:active {
-  background: #4509be;
-  border-color: #4509be;
+  background: #444444;
+  border-color: #444444;
 }
 
 /* -----  2.3 Grid & Layout  ------------------------------------------------ */
@@ -446,11 +459,11 @@ h1 + .intro {
 
 .pagination-item:hover, .pagination-item:focus {
   background: #261e66;
-  color: #71efac;
+  color: #fff;
 }
 
 .pagination-item:active {
-  background: #4509be;
+  background: #444444;
 }
 
 .pagination-item.left {
@@ -603,7 +616,7 @@ h1 + .intro {
 /* ----- 3.1  Header  ------------------------------------------------------- */
 
 .header {
-  padding-top: 1.5rem;
+  padding-top: 1rem;
 }
 
 .branding {
@@ -621,7 +634,7 @@ h1 + .intro {
 
 @media all and (min-width: 56em) {
   .header {
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
   }
   .branding {
@@ -634,39 +647,6 @@ h1 + .intro {
   .navigation {
     vertical-align: baseline;
     width: 50%;
-  }
-}
-
-/* -----  3.2 Menu  --------------------------------------------------------- */
-
-.menu {
-  text-align: center;
-  font-weight: 500;
-}
-
-.menu-item {
-  display: inline-block;
-}
-
-.menu-item:not(:last-child)::after {
-  content: "⁄";
-  display: inline-block;
-  font-size: .75em;
-  padding: 0 .2em;
-  color: #a8a5be;
-}
-
-.menu-item a {
-  border-bottom: 0;
-}
-
-.menu-item.is-active a {
-  border-bottom: 2px solid #71efac;
-}
-
-@media all and (min-width: 56em) {
-  .menu {
-    text-align: right;
   }
 }
 
@@ -724,19 +704,6 @@ h1 + .intro {
 
 /* =====  4 Template-specific Components ==================================== */
 
-/* -----  4.1 Homepage  ----------------------------------------------------- */
-
-.projects-section {
-  background: #e4fbff;
-  margin-top: 3rem;
-  padding-top: 2.25rem;
-  padding-bottom: .75rem;
-}
-
-.projects-section-more {
-  text-align: center;
-}
-
 /* ----- 4.2 Blog Article  -------------------------------------------------- */
 
 .article-title {
@@ -763,7 +730,7 @@ h1 + .intro {
   font-family: $heading-font-family;
   letter-spacing: .025em;
   white-space: nowrap;
-  border-bottom: 2px solid #71efac;
+  border-bottom: 2px solid #fff;
 }
 
 /* -----  4.3 Team  --------------------------------------------------------- */
