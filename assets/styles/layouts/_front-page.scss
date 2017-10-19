@@ -1,36 +1,50 @@
 .home {
   main section.splash {
-    @include row;
-    @include pad(2em 2%);
-    padding-top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: $background-color;
-    .right {
-      text-align: right;
+    @include pad(default 0)
+    @include media($phablet) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+    .splash__welcome {
       color: white;
+      max-width: $phablet;
+      text-align: left;
+      text-shadow: 2px 2px 18px rgba(204, 146, 138, 0.1);
+      h1 {
+        font-size: 3.5em;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 1.3em;
+        font-weight: normal;
+        text-transform: lowercase;
+      }
       @include media($phablet) {
+        @include shift(0);
         @include span-columns(7);
-        @include omega();
+        text-align: right;
+      }
+        @include media($tablet) {
+          h1 {
+            font-size: 4.5em;
+          }
+          h2 {
+            font-size: 1.5em;
+          }
       }
     }
-    h1 {
-      font-size: 9vw;
-      text-align: right;
-      margin-bottom: 0;
-    }
-    h2 {
-      font-size: 3vw;
-      font-weight: normal;
-      text-transform: uppercase;
-    }
     figure {
+      @include omega();
+      @include span-columns(8);
+      @include shift(2);
       @include media($phablet) {
+        @include shift(0);
         @include span-columns(5);
         @include omega();
       }
-      text-align: center;
       margin: 0;
       img {
         max-width: 12em;
@@ -40,13 +54,8 @@
   }
 
   section.intro {
-    @include row;
-    @include pad(2.5em 0);
-    @include media($phablet) {
-      @include span-columns(8);
-      @include shift(2);
-      @include omega();
-    }
+    @include outer-container
+    @include pad();
     ul {
       margin-bottom: 0;
     }

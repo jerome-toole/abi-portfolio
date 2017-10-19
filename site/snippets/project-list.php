@@ -24,7 +24,7 @@ if(isset($limit)) $projects = $projects->limit($limit);
 
   <?php foreach($projects as $project): ?>
 
-    <li class="project-list__item">
+    <li class="project-list__item js-fademe">
       <?php if($image = $project->images()->sortBy('sort', 'asc')->first()): $thumb = $image->crop(600, 600); ?>
         <img src="<?= $thumb->url() ?>" alt="Thumbnail for <?= $project->title()->html() ?>" class="project-list__image" />
       <?php endif ?>

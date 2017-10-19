@@ -4,6 +4,7 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./favi.png" />
 
   <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
   <meta name="description" content="<?= $site->description()->html() ?>">
@@ -16,12 +17,3 @@
 
 </head>
 <body class="<?php echo $page->template(); ?> <?php echo $page->uid() ?>">
-
-  <header class="header" role="banner">
-    <div class="grid">
-
-
-      <?php snippet('menu') ?>
-
-    </div>
-  </header>

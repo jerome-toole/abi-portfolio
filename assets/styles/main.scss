@@ -6,14 +6,16 @@
 @import 'base/base'; // Bitters
 @import '../../bower_components/bourbon/app/assets/stylesheets/addons/clearfix';
 
-@import "kirby-starterkit";
+// @import "kirby-starterkit";
 
 // Layouts
-@import 'layouts/front-page.scss';
+@import 'layouts/page';
+@import 'layouts/front-page';
 
 // Modules
 @import 'modules/project-list';
 @import 'modules/testimonials';
 @import 'modules/audio-player';
 @import 'modules/nav';
-
+@import 'modules/accordian-tabs';
+@import 'modules/carousel';

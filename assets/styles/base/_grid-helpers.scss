@@ -1,0 +1,8 @@
+.outer-container {
+	@include outer-container;
+	@include pad();
+}
+
+.wrap {
+  @include pad();
+}

@@ -20,11 +20,11 @@ if(isset($limit)) $testimonials = $testimonials->limit($limit);
 
 ?>
 
-<ul class="testimonial-list">
+<div class="testimonial-list carousel" data-flickity='{ "wrapAround": true }'>
 
   <?php foreach($testimonials as $testimonial): ?>
 
-    <li class="testimonial-list__item">
+    <div class="testimonial-list__item carousel-cell">
       <?php if($image = $testimonial->images()->sortBy('sort', 'asc')->first()): $thumb = $image->crop(600, 600); ?>
         <img src="<?= $thumb->url() ?>" alt="Thumbnail for <?= $testimonial->title()->html() ?>" class="testimonial-list__image" />
       <?php endif ?>
@@ -34,8 +34,8 @@ if(isset($limit)) $testimonials = $testimonials->limit($limit);
         <h5 class="testimonial-list__client"><?= $testimonial->client()->html() ?></h5>
         <p class="testimonial-list__description"><?= $testimonial->text()->kirbytext() ?></p>
       </div>
-    </li>
+    </div>
 
   <?php endforeach ?>
 
-</ul>
+</div>

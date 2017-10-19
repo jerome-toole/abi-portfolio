@@ -19,7 +19,8 @@
         "assets/scripts/vendor/imagesloaded.pkgd.min.js",
         "assets/scripts/vendor/jquery.scrolldepth.js",
         "assets/scripts/vendor/jquery-easing.js",
-        "assets/scripts/vendor/audio.min.js"
+        "assets/scripts/vendor/audio.min.js",
+        "assets/scripts/vendor/flickity.pkgd.min.js"
       ]
     },
     "jquery.js": {
@@ -27,6 +28,6 @@
     }
   },
   "config": {
-    "devUrl": "localhost:4000"
+    "devUrl": "abi.dev:8888"
   }
 }

@@ -3,16 +3,19 @@
 // Copyright 2013-2015 thoughtbot, inc.
 // MIT License
 
+@import 'normalize';
 @import "variables";
 
 // Neat Settings -- uncomment if using Neat -- must be imported before Neat
 // @import "grid-settings";
+@import "grid-helpers";
 
 @import "buttons";
 @import "forms";
 @import "lists";
 @import "tables";
 @import "typography";
+@import "utilities";
 
 
 html {
@@ -20,8 +23,8 @@ html {
   color: $base-font-color;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5em;
-  line-height: 1.5;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
   font-family: $base-font-family;
   /* Always show the vertical scrollbar to prevent `jumps`
      of page content after navigating from a very short page
@@ -47,15 +50,11 @@ html {
     /* We decrease the font-size a little-bit for tiny
        screens. Because this stylesheet uses relative units
        everywhere, everything scales nicely. */
-    font-size: 1.25em;
+    font-size: 1.1em;
   }
 }
 
 body {
   /* space for sticky footer */
   margin-bottom: 10rem;
-}
-
-.wrap {
-  @include pad();
 }
