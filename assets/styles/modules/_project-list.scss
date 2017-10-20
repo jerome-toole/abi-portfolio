@@ -6,16 +6,19 @@
   &__image {
     @include media($phone) {
       @include span-columns(4);
-      @include pad();
+      @include pad(0 default);
     }
   }
   &__details {
     @include media($phone) {
       @include span-columns(8);
-      @include pad();
+      @include pad(0 default);
     }
     h1, h2, h3, h4, h5 {
       margin-bottom: 0;
+    }
+    h5 {
+      font-size: .8em;
     }
   }
 

@@ -25,14 +25,10 @@ if(isset($limit)) $testimonials = $testimonials->limit($limit);
   <?php foreach($testimonials as $testimonial): ?>
 
     <div class="testimonial-list__item carousel-cell">
-      <?php if($image = $testimonial->images()->sortBy('sort', 'asc')->first()): $thumb = $image->crop(600, 600); ?>
-        <img src="<?= $thumb->url() ?>" alt="Thumbnail for <?= $testimonial->title()->html() ?>" class="testimonial-list__image" />
-      <?php endif ?>
       <div class="testimonial-list__details">
-        <h3 class="testimonial-list__title"><?= $testimonial->title()->html() ?></h3>
-        <h5 class="testimonial-list__type"><?= $testimonial->type()->html() ?></h5>
-        <h5 class="testimonial-list__client"><?= $testimonial->client()->html() ?></h5>
-        <p class="testimonial-list__description"><?= $testimonial->text()->kirbytext() ?></p>
+        <div class="testimonial-list__description"><?= $testimonial->text()->kirbytext() ?></div>
+        <p class="testimonial-list__title"><?= $testimonial->title()->html() ?></p>
+        <p class="testimonial-list__position"><?= $testimonial->position()->html() ?></p>
       </div>
     </div>
 

@@ -32,3 +32,19 @@ Bio:
 Abigail Hardiman is an actor, musician and voice artist. She has 12 years experience in the industry having worked in radio, TV, Film, ELT, animation and books. Abi has a youthful, clear and versatile voice, which is trained to professional standard in classical singing. Not only does she perform, she regularly steps over to the other side of the glass and works as a voiceover producer and engineer.
 
 Aliquam sed lorem ut enim. Morbi sem metus, congue id consectetur et, finibus non magna. Nam accumsan sem at nunc interdum vehicula. Vestibulum eleifend ipsum.
+
+----
+
+Reel1file: sample.mp3
+
+----
+
+Reel1title: Commercial
+
+----
+
+Reel2file: my-mad-fat-diary-audiobook-_-rae-earl.mp3
+
+----
+
+Reel2title: Narrative

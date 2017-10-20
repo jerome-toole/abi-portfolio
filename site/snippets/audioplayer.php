@@ -16,9 +16,9 @@
             <div class="progress"></div>
             <div class="loaded"></div>
           </div>
+          <div class="time"><small class="played">00:00</small><small class="duration">00:00</small></div>
         </div>
 
-        <div class="time"><small class="played">00:00</small>/<small class="duration">00:00</small></div>
         <div class="error-message"></div>
       </div>
 

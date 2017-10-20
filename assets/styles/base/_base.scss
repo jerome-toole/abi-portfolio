@@ -4,6 +4,7 @@
 // MIT License
 
 @import 'normalize';
+@import "mixins";
 @import "variables";
 
 // Neat Settings -- uncomment if using Neat -- must be imported before Neat
@@ -52,9 +53,4 @@ html {
        everywhere, everything scales nicely. */
     font-size: 1.1em;
   }
-}
-
-body {
-  /* space for sticky footer */
-  margin-bottom: 10rem;
 }

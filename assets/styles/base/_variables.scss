@@ -1,7 +1,7 @@
 // Typography
 $lato: Lato, 'Lato', $helvetica;
-$base-font-family: 'Karla', $helvetica;
-$heading-font-family: 'Karla', $helvetica;
+$base-font-family: $helvetica;
+$heading-font-family: $helvetica;
 
 // Font Sizes
 $base-font-size: 1.2em;
@@ -17,15 +17,20 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #143888;
 $dark-gray: #111;
 $medium-gray: #999;
 $light-gray: #ddd;
 
 $black: #000;
-$light-blue: #ecfcff;
-$blue-green: #e4fbff;
-$background-color: #ffe1dd;
+
+$blue: #0000FF;
+$cyan: #00FFFF;
+$cyan: #43ffdb;
+$yellow: #FED134;
+$lightpink: #FFE1DD;
+$peach: #ffd4c5;
+
+$background-color: $lightpink;
 $background-color-2: #fff5ef;
 $display-color: white;
 

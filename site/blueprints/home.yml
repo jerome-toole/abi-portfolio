@@ -22,17 +22,28 @@ fields:
     type:  textarea
     size:  small
 
-  commerciallink:
-    label: Commercial Reel
+  reel1file:
+    label: Reel 1 File
     type: select
     width: 1/2
     options: audio
 
-  narrativelink:
-    label: Narrative Reel
+  reel1title:
+    label: Reel 1 Title
+    type: text
+    width: 1/2
+
+  reel2file:
+    label: Reel 2 File
     type: select
     width: 1/2
     options: audio
+
+
+  reel2title:
+    label: Reel 2 Title
+    type: text
+    width: 1/2
 
   bio:
     label: Bio

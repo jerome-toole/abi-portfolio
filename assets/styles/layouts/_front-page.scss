@@ -2,6 +2,7 @@
   main section.splash {
     background: $background-color;
     @include pad(default 0)
+    margin-bottom: $base-spacing;
     @include media($phablet) {
       display: flex;
       align-items: center;
@@ -53,45 +54,104 @@
     }
   }
 
+  .accordion-tabs {
+    .tab-link {
+      font-size: 1.6em;
+    }
+  }
+
   section.intro {
-    @include outer-container
-    @include pad();
+    @include media($phablet) {
+      @include span-columns(6);
+      @include shift(1);
+    }
     ul {
       margin-bottom: 0;
     }
   }
-  .intro {
-    text-align: left;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 0;
-  }
 
   section.reels {
-    @include row;
-    clear: both;
-    div.audio-player-wrap {
-      @include media($phablet) {
-        @include span-columns(6);
-      }
-      &:nth-of-type(2) {
-        @include omega();
-      }      
+    text-align: center;
+    h2 {
+      color: $blue;
     }
-    hr {
-      clear: both;
+    @include media($phablet) {
+      @include span-columns(5);
+    }
+    div.audio-player-wrap {
+      margin-bottom: 2em;
+      max-width: 15em;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
-}
 
+  section.testimonials {
+    background: $peach;
+    position: relative;
+    @include pad(4em default);
+    overflow: hidden;
+    .outer-container {
+      &:before, &:after {
+        position: absolute;
+        pointer-events: none;
+        font-size: 16em;
+        height: .3em;
+        z-index: 1;
+        line-height: .8;
+        color: rgba(white, .8);
+        text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+        animation-name: floating;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
 
-/* -----  4.1 Homepage  ----------------------------------------------------- */
-
-.projects-section {
-  padding-top: 2.25rem;
-  padding-bottom: .75rem;
-}
-
-.projects-section-more {
-  text-align: center;
+        @keyframes floating {
+          0% {
+            transform: translateY(0)
+          }
+          50% {
+            transform: translateY(-3px);
+            text-shadow: 0px 12px 22px rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+      &:before {
+        animation-delay: 1s;
+        content: "“";
+        top: 15%;
+        left: 10%;
+      }
+      &:after {
+        animation-duration: 5s;
+        content: "”";
+        bottom: 15%;
+        right: 10%;
+      }
+      
+    }
+    .testimonial-list {
+      position: relative;
+      &__item {
+        @include pad(1.5em default);
+        width: 70%;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+        color: white;
+      }
+      &__description {
+        font-size: 1.4em;
+      }
+      &__title, &__position {
+        font-size: .8em;
+        text-transform: uppercase; 
+        margin-bottom: 0;
+      }
+      &__title {
+        font-weight: 700;
+        font-size: .9em;
+      }
+    }
+  }
 }
