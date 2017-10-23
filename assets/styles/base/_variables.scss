@@ -14,6 +14,7 @@ $heading-line-height: 1.2;
 $base-border-radius: 1px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
+$large-spacing: $base-spacing * 1.5;
 $base-z-index: 0;
 
 // Colors
@@ -29,6 +30,7 @@ $cyan: #43ffdb;
 $yellow: #FED134;
 $lightpink: #FFE1DD;
 $peach: #ffd4c5;
+$green: #63f3a6;
 
 $background-color: $lightpink;
 $background-color-2: #fff5ef;

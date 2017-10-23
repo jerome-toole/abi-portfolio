@@ -23,14 +23,15 @@ html {
   background: white;
   color: $base-font-color;
   font-style: normal;
-  font-weight: 400;
   font-size: $base-font-size;
   line-height: $base-line-height;
   font-family: $base-font-family;
+  font-weight: 300;
   /* Always show the vertical scrollbar to prevent `jumps`
      of page content after navigating from a very short page
      that does not scroll to a long pager */
   overflow-y: scroll;
+  overflow-x: hidden;
   /* Setting this to `default` prevents the cursors from
      changing when hovering blocks of text or whitespace,
      which is less distracting */

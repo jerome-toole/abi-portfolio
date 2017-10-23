@@ -8,6 +8,7 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+  letter-spacing: 1.2;
 }
 
 p {
@@ -18,7 +19,7 @@ p {
 a {
   color: $action-color;
   text-decoration: none;
-  transition: color $base-duration $base-timing;
+  transition: color $base-duration $base-timing, border-bottom $base-duration $base-timing;
 
   &:active,
   &:focus,
@@ -38,4 +39,21 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+hr {
+  text-align: center;
+  margin: 1.5rem auto;
+  width: 80%;
+  border: 0;
+  height: 2px;
+  background: $peach;
+  background-image: linear-gradient(to right, white, $peach, white);
+}
+
+h1 + hr,
+.intro + hr {
+  /* Shift a <hr> right after an `.intro`
+     or <h1> block one line up. */
+  margin-top: -1.5rem;
 }

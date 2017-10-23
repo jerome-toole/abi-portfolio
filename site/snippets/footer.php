@@ -2,9 +2,10 @@
     <div class="outer-container">
 
 
-      <p>
-        <span><?php echo html::decode($site->footer_text()->kirbytext()) ?> <b class="heart">♥</b></span>
+      <p class="cta">
+        <span><?php echo html::decode($site->footer_text()->kirbytext()) ?></span>
       </p>
+      <p>abi@abigailhardiman.com</p>
       
     </div>
   </footer>

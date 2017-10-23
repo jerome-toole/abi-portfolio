@@ -1,5 +1,11 @@
 footer.main-footer {
 	text-align: center;
+	@include pad(4em default);
+	background: white;
+	color: black;
+	.cta {
+		font-size: 2em;
+	}
 	.footer-copyright {
 		font-size: .8em;
 	}

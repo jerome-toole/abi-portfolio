@@ -1,6 +1,6 @@
 .home {
   main section.splash {
-    background: $background-color;
+    background: $peach;
     @include pad(default 0)
     margin-bottom: $base-spacing;
     @include media($phablet) {
@@ -8,6 +8,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: row-reverse;
+      margin-bottom: $base-spacing * 2;
     }
     .splash__welcome {
       color: white;
@@ -54,6 +55,11 @@
     }
   }
 
+  .section-2 {
+    @include outer-container;
+    margin-bottom: $large-spacing;
+  }
+
   .accordion-tabs {
     .tab-link {
       font-size: 1.6em;
@@ -62,6 +68,7 @@
 
   section.intro {
     @include media($phablet) {
+      @include pad(0);
       @include span-columns(6);
       @include shift(1);
     }
@@ -72,24 +79,33 @@
 
   section.reels {
     text-align: center;
+    @include row;
     h2 {
-      color: $blue;
+      color: $green;
     }
     @include media($phablet) {
       @include span-columns(5);
     }
     div.audio-player-wrap {
       margin-bottom: 2em;
-      max-width: 15em;
       margin-left: auto;
       margin-right: auto;
+      @include media($phone) {
+        @include span-columns(6);
+      }
+      @include media($phablet) {
+        @include fill-parent;
+      }
+    }
+    .audio-player {
+      max-width: 12em;
     }
   }
 
   section.testimonials {
     background: $peach;
     position: relative;
-    @include pad(4em default);
+    @include pad(4em 0);
     overflow: hidden;
     .outer-container {
       &:before, &:after {
@@ -119,14 +135,22 @@
       &:before {
         animation-delay: 1s;
         content: "“";
-        top: 15%;
-        left: 10%;
+        top: 5%;
+        left: 0;
       }
       &:after {
         animation-duration: 5s;
         content: "”";
-        bottom: 15%;
-        right: 10%;
+        bottom: 5%;
+        right: 0;
+      }
+      @include media($phablet) {
+        &:before {
+          left: 10%;
+        }
+        &:after {
+          right: 10%;
+        }
       }
       
     }
@@ -147,11 +171,20 @@
         font-size: .8em;
         text-transform: uppercase; 
         margin-bottom: 0;
+        font-weight: 400;
       }
       &__title {
         font-weight: 700;
         font-size: .9em;
       }
+    }
+  }
+  main {
+    &:after {
+      content: "";
+      display: block;
+      height: 4em;
+      background: linear-gradient($peach,white);
     }
   }
 }
